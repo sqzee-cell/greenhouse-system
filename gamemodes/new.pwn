@@ -24,24 +24,51 @@
 // Default inc`s
 #include <a_samp>
 #include <a_mysql>
+#include <crashdetect>
 #include <foreach>
 #include <sscanf2>
 #include <Pawn.CMD>
-
-// Модули
-#include sqzee-cell/greenhouse/main.inc
-
+#include <streamer>
 
 // Макросы
 #define void%0(%1) forward%0(%1); public%0(%1)
 
+// MySQL
+new MySQL:mysql;
+
+// Игрок
+enum player_info
+{
+	pID, // ID в базе
+};
+new PI[MAX_PLAYERS][player_info];
+
+// Модули
+#include sqzee-cell/greenhouse/main.inc
+
 public OnGameModeInit()
 {
-    #if defined _greenhouse_inc_
+	// mysql = mysql_connect("", "", "", "", );
+
+	if(mysql_errno(mysql)) {
+		printf("\t[MySQL] Ошибка при подключении к базе данных. Code: %04d", mysql_errno(mysql));
+		return SendRconCommand("exit");
+	} else {
+		CallLocalFunction("OnMySQLConnection", "");
+	}
+
+	#if defined _greenhouse_inc_
         GreenHouse:Init();
     #endif
 
     print("\tOnGameModeInit");
 
     return true;
+}
+
+void OnMySQLConnection()
+{
+	printf("[MySQL] Успешное подключение к базе данных");
+
+	return true;
 }

@@ -65,7 +65,7 @@ native SendDeathMessage(killer, killee, weapon);
 native SendDeathMessageToPlayer(playerid, killer, killee, weapon);
 native GameTextForAll(const string[],time,style);
 native GameTextForPlayer(playerid,const string[],time,style);
-native SetTimer(funcname[], interval, repeating);
+native SetTimer(const funcname[], interval, repeating);
 native SetTimerEx(const funcname[], interval, repeating, const format[], {Float,_}:...);
 native KillTimer(timerid);
 native GetTickCount();
@@ -143,7 +143,7 @@ native IsPlayerAdmin(playerid);
 native Kick(playerid);
 native Ban(playerid);
 native BanEx(playerid, const reason[]);
-native SendRconCommand(command[]);
+native SendRconCommand(const command[]);
 native GetPlayerNetworkStats(playerid, retstr[], retstr_size);
 native GetNetworkStats(retstr[], retstr_size);
 native GetPlayerVersion(playerid, const version[], len); // Returns the SA-MP client revision as reported by the player
