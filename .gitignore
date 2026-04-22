@@ -1,0 +1,15 @@
+# VSCode settings
+.vscode/
+
+# Pawn
+*.amx
+*.txt
+pawno/include/github/git.inc
+
+# Other
+*.tmp
+*~
+*.user
+.DS_Store
+*.log
+*.exe

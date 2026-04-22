@@ -1,3 +1,33 @@
 {
-    "files.encoding": "windows1251"
+    "files.encoding": "windows1251",
+    "editor.lineNumbers": "on",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.iconTheme": "icons",
+    "workbench.productIconTheme": "Default",
+
+    // Editor
+    "editor.folding": false,
+	"editor.scrollBeyondLastLine": true,
+	"editor.fontSize": 18,
+	"editor.lineHeight": 28.5,
+	"editor.fontWeight": "normal",
+	"editor.fontFamily": "'JetBrains Mono'",
+	"editor.fontLigatures": true,
+
+    // Terminal
+    "terminal.integrated.fontWeight": "400",
+	"terminal.integrated.fontFamily": "JetBrains Mono",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.cursorStyle": "line",
+
+    // Other
+    "explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.compactFolders": false, // компактные папки
+	"editor.smoothScrolling": true, // плавный скролл
+	"workbench.list.smoothScrolling": true, // плавный скролл
+	"terminal.integrated.smoothScrolling": true, // плавный скролл в терминале
+	"editor.cursorBlinking": "expand", // мигающей курсор
+	"terminal.integrated.cursorBlinking": true, // мигающей курсор
+	"editor.padding.top": 15 // отступ сверху кода
 }

@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-normal",
+      "type": "shell",
+      "command": "${workspaceRoot}/pawno/pawncc",
+      "args": [
+        "'${fileBasename}'",
+        "'-D${fileDirname}'",
+        "'-i${workspaceRoot}/pawno/include'",
+        "'-;+'",
+        "'-(+'",
+        "'-O2'",
+        "'-d3'",
+        "'-C'",
+        "'-v2'"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": false,
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated"
+      },
+      "problemMatcher": "$pawncc"
+    }
+  ]
+}
