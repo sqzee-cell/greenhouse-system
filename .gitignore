@@ -1,5 +1,6 @@
 # VSCode settings
-.vscode/*
+.vscode/settings.json
+.vscode/tasks.json
 
 # Pawn
 *.amx
